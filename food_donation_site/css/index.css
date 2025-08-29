@@ -1,0 +1,146 @@
+  body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .hero {
+            background: url('your-hero-image.jpg') center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            color: #2e5339;
+            background-color: #fdecdc;
+        }
+
+        .hero h1 {
+            font-weight: bold;
+        }
+
+        .cta-buttons .btn {
+            font-size: 1.2rem;
+            padding: 15px 25px;
+            margin: 10px;
+        }
+
+        .what-we-do {
+            background: #fffbe6;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .what-we-do .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .site-footer {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 50px 0 30px;
+    font-size: 0.9em;
+}
+
+.site-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.site-footer .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.site-footer .footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.site-footer .copyright {
+    opacity: 0.8;
+}
+
+.site-footer .footer-center ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer .footer-center ul li {
+    margin-bottom: 8px;
+}
+
+.site-footer .footer-center ul li a {
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.site-footer .footer-center ul li a:hover {
+    text-decoration: underline;
+}
+
+.site-footer .footer-right {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.site-footer .social-icons {
+    margin-bottom: 20px;
+}
+
+.site-footer .social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.site-footer .social-icons a:hover {
+    color: #f0f0f0;
+}
+
+.site-footer .footer-buttons button {
+    background-color: #F5D300; /* Yellow buttons */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px; /* Space between buttons if they wrap */
+    transition: background-color 0.3s ease;
+}
+
+.site-footer .footer-buttons button:hover {
+    background-color: #e0c000; /* Darker yellow on hover */
+}
+
+
+        .social-icons a {
+            color: white;
+            margin: 0 10px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 60px 10px;
+            }
+
+            .cta-buttons .btn {
+                width: 100%;
+                margin-bottom: 15px;
+            }
+        
+
+        .site-footer {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 50px 0 30px;
+    font-size: 0.9em;
+}
+
+        }

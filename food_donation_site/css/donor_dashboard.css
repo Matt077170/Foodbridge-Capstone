@@ -1,0 +1,100 @@
+
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        nav a {
+            margin-right: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #007BFF;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .sidebar {
+    width: 250px; /* Fixed width for the sidebar */
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-header span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.6em;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav ul li a i {
+    margin-right: 15px;
+    font-size: 1.2em;
+}
+
+.sidebar-nav ul li a:hover,
+.sidebar-nav ul li a.active {
+    background-color: rgba(0, 0, 0, 0.2); /* Darker green/overlay on hover/active */
+    border-left: 5px solid #F5D300; /* Yellow accent for active/hover */
+    padding-left: 15px; /* Adjust padding due to border */
+}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
+            text-align: center;
+        }
+        table th {
+            background-color: #f8f8f8;
+            cursor: pointer;
+        }
+        .pagination {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .pagination a {
+            margin: 0 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .chart-container {
+            max-width: 500px;
+            margin: 20px auto;
+        }

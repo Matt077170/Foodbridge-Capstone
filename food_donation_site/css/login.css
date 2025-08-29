@@ -1,0 +1,498 @@
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f7f7f7; /* Light background for the overall page */
+}
+
+.container {
+    max-width: 1200px; /* Adjust as needed for your desired width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar {
+    background-color: #fff; /* White background for the navbar */
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.navbar .logo img {
+    height: 40px; /* Adjust logo size */
+    margin-right: 10px;
+}
+
+.navbar nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar nav ul li {
+    margin-left: 30px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.navbar nav ul li a:hover {
+    color: #007bff; /* Example hover color, adjust to your brand */
+}
+
+.login-button {
+    background-color: #f0f0f0; /* Light gray for login button */
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.login-button:hover {
+    background-color: #e0e0e0; /* Darker gray on hover */
+    color: #000;
+}
+
+/* Main Content - Hero Section (with Login Card) */
+.hero-section {
+    position: relative;
+    padding: 100px 0; /* Adjust padding to give space */
+    background-color: #f7f7f7; /* Background color */
+    overflow: hidden; /* Hide overflowing parts of the hero image */
+}
+
+.hero-section .container.hero-content {
+    display: flex;
+    align-items: flex-start; /* Align items to the start of the cross-axis */
+    justify-content: space-between;
+    gap: 40px; /* Space between text and login card */
+    position: relative;
+    z-index: 2; /* Ensure content is above the overlay image */
+}
+
+.hero-text {
+    flex: 1; /* Allows text to take available space */
+    max-width: 550px; /* Max width for the text block */
+    color: #333;
+    padding-top: 50px; /* Pushes the text down a bit to align with the login card */
+}
+
+.hero-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.8em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+/* Login Card */
+.login-card {
+    background-color: #FFC0CB; /* Light pink background */
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 380px; /* Fixed width for the login card */
+    text-align: center;
+    color: #333;
+}
+
+.login-card h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.login-card .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-card label {
+    display: block;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.login-card input[type="text"],
+.login-card input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.login-card input[type="text"]:focus,
+.login-card input[type="password"]:focus {
+    border-color: #007bff; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+.login-btn {
+    background-color: #4CAF50; /* Green submit button */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Full width button */
+    margin-top: 15px;
+}
+
+.login-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+.forgot-password,
+.no-account {
+    display: block;
+    margin-top: 15px;
+    font-size: 0.9em;
+    color: #666;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover,
+.no-account:hover {
+    color: #007bff;
+}
+
+/* PHP message styling */
+.login-card p {
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+/* Hero Image Overlay */
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    right: 0; /* Position to the right side of the hero section */
+    width: 50%; /* Adjust width as needed */
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Align the image to the right within its container */
+    z-index: 1; /* Ensure it's behind the text and login card */
+}
+
+.hero-image-overlay .large-logo {
+    height: 120%; /* Make it larger to fill and overflow */
+    opacity: 0.1; /* Very subtle opacity */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    width: auto; /* Maintain aspect ratio */
+    filter: grayscale(100%); /* Make it monochrome */
+    transform: translateX(20%); /* Move it slightly off-screen to the right */
+}
+
+    .what-we-do {
+            background: #fffbe6;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .what-we-do .icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.feature-item .icon-box {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    color: #fff; /* Icon color */
+}
+
+.feature-item .icon-box.yellow-border {
+    background-color: #FFC0CB; /* Pink background for icons */
+    border: 3px solid #F5D300; /* Yellow border */
+}
+
+.feature-item .icon-box.green-border {
+    background-color: #FFC0CB; /* Pink background for icons */
+    border: 3px solid #4CAF50; /* Green border */
+}
+
+
+.feature-item .icon-box i {
+    color: #333; /* Icon color inside box */
+}
+
+
+.feature-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+    color: #333;
+}
+
+/* Footer */
+.site-footer {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 50px 0 30px;
+    font-size: 0.9em;
+}
+
+.site-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.site-footer .footer-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.site-footer .footer-logo {
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.site-footer .copyright {
+    opacity: 0.8;
+}
+
+.site-footer .footer-center ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.site-footer .footer-center ul li {
+    margin-bottom: 8px;
+}
+
+.site-footer .footer-center ul li a {
+    color: white;
+    text-decoration: none;
+    transition: text-decoration 0.3s ease;
+}
+
+.site-footer .footer-center ul li a:hover {
+    text-decoration: underline;
+}
+
+.site-footer .footer-right {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.site-footer .social-icons {
+    margin-bottom: 20px;
+}
+
+.site-footer .social-icons a {
+    color: white;
+    font-size: 1.5em;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.site-footer .social-icons a:hover {
+    color: #f0f0f0;
+}
+
+.site-footer .footer-buttons button {
+    background-color: #F5D300; /* Yellow buttons */
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px; /* Space between buttons if they wrap */
+    transition: background-color 0.3s ease;
+}
+
+.site-footer .footer-buttons button:hover {
+    background-color: #e0c000; /* Darker yellow on hover */
+}
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 992px) {
+    .hero-section .container.hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-text {
+        padding-top: 0;
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+
+    .login-card {
+        width: 80%; /* Make login card more fluid */
+        max-width: 400px; /* Limit max width */
+    }
+
+    .hero-image-overlay {
+        position: static; /* Remove absolute positioning on smaller screens */
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+    }
+
+    .hero-image-overlay .large-logo {
+        height: 200px; /* Adjust size for mobile */
+        transform: none;
+    }
+
+    .navbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        margin-top: 15px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar nav ul li {
+        margin: 10px 0;
+    }
+
+    .navbar .login-button {
+        margin-top: 15px;
+    }
+
+    .site-footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .site-footer .footer-left,
+    .site-footer .footer-center,
+    .site-footer .footer-right {
+        margin-bottom: 30px;
+        width: 100%; /* Full width for footer sections */
+    }
+
+    .site-footer .social-icons {
+        justify-content: center;
+        display: flex; /* To center social icons */
+    }
+    .site-footer .social-icons a {
+        margin: 0 10px; /* Adjust spacing */
+    }
+
+    .site-footer .footer-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .site-footer .footer-buttons button {
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2em;
+    }
+    .hero-text p {
+        font-size: 1em;
+    }
+    .what-we-do-section h2 {
+        font-size: 2em;
+    }
+    .features-grid {
+        grid-template-columns: 1fr; /* Stack features on very small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        padding: 20px;
+    }
+    .login-card h2 {
+        font-size: 1.5em;
+    }
+}
