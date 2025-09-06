@@ -1,0 +1,205 @@
+body { background:#f8f9fa; }
+        .sidebar { min-height:100vh; background:#343a40; padding:1rem; }
+        .sidebar a { display:block; padding:.6rem; color:#fff; text-decoration:none; margin-bottom:.4rem; border-radius:5px; }
+        .sidebar a:hover, .sidebar a.active { background:#0d6efd; }
+        /* CSS to fix the dropdown menu styling */
+        .sidebar .dropdown-menu {
+            background-color: #495057;
+            border: none;
+        }
+        .sidebar .dropdown-item {
+            color: #fff;
+        }
+        .sidebar .dropdown-item:hover {
+            background-color: #0d6efd;
+        }
+        .content { padding:2rem; }
+		
+		.navbar-header {
+            background-color: #e6cab3;
+            padding: 0.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+			position: sticky;  /* Make the navbar sticky */
+			top: 0;            /* Stick it to the top of the viewport */
+			z-index: 1000;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+			margin-left: -8rem;
+        }
+
+        .navbar-logo {
+            height: 90px;
+            width: auto;
+        }
+        /* --- End of New Navbar Styles --- */
+
+        .sidebar {
+            min-height: 100vh;
+            background: #343a40;
+            padding: 1rem;
+			background: #EFEFEF;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+            margin-bottom: .4rem;
+            border-radius: 5px;
+			margin-bottom: 2rem;
+			border-left: 4px solid transparent;
+			padding: 10px 15px; /* Adjust padding for spacing */
+			transition: all 0.3s ease;
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #f0f0f0; /* Optional: adds a hover effect */
+			border-left-color: #555;
+			border-left-color: #ff5733; /* The color of the line for the active link */
+			color: #ff5733; /* Optional: highlights the active text */
+			font-weight: bold;
+			
+        }
+
+        .sidebar .dropdown-menu {
+            background-color: #f0f0f0;
+			border: px solid #6c757d; /* Added a subtle gray border */
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Added a light box shadow */
+}
+
+        .sidebar .dropdown-item {
+            color: #000;
+        }
+
+        .sidebar .dropdown-item:hover {
+            background-color: #fff;
+        }
+		.text-white {
+    --bs-text-opacity: 1;
+    color: #000 !important;
+		}
+		
+		
+		
+		/* --- Dashboard Content Design --- */
+/* --- Modern Dashboard Design Enhancements (No Animation) --- */
+
+.content-header h2 {
+    font-weight: 700;
+    color: #212529;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, #007bff, #c7a4ff, #e9ecef);
+    margin-bottom: 2rem;
+}
+
+/* Updated Card Metrics with Gradients and no animation */
+.card-metric {
+    border: none;
+    border-radius: 15px;
+    color: white; /* Ensures text is visible on dark gradients */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Individual Card Colors with Gradients */
+.card-metric-1 {
+    background-image: linear-gradient(45deg, #007bff, #00c0ff);
+}
+
+.card-metric-2 {
+    background-image: linear-gradient(45deg, #1cc88a, #80d9a6);
+}
+
+.card-metric-3 {
+    background-image: linear-gradient(45deg, #f6c23e, #fdbf2d);
+}
+.card-metric-4 {
+    background-image: linear-gradient(45deg, #6f42c1, #a164e8);
+}
+
+.card-metric-5 {
+    background-image: linear-gradient(45deg, #e83e8c, #ff81a7);
+}
+
+.card-metric-6 {
+    background-image: linear-gradient(45deg, #fd7e14, #ffbf00);
+}
+.card-metric-7 {
+    background-image: linear-gradient(45deg, #6f42c1, #a164e8);
+}
+
+/* Hover effect */
+.card-metric:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Updated Typography for better contrast and a modern look */
+.card-metric .card-title {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.card-metric .display-6 {
+    font-weight: 800;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Updated Box Wrappers for a cleaner look */
+.box-wrapper {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title {
+    font-weight: 700;
+    color: #495057;
+    margin-bottom: 1.5rem;
+}
+
+/* Updated List group styling */
+.list-group-item {
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+    background-color: #fcfcfc;
+    transition: all 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.list-group-item span {
+    font-weight: 500;
+}

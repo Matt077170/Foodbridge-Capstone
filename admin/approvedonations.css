@@ -1,0 +1,139 @@
+/* Body and Main Content Styling */
+body {
+    background-color: #f0f2f5; /* A soft, off-white background color */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #495057; /* A professional, dark gray text color */
+}
+
+main.container {
+    background-color: #ffffff; /* White background for the main content area */
+    border-radius: 12px; /* Softens the corners of the main container */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); /* A more pronounced shadow for a floating effect */
+    padding: 2rem;
+    margin-top: 2rem; /* Adds space below the header */
+}
+
+/* Tab and Button Styling */
+.nav-tabs .nav-link {
+    border: none;
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.nav-tabs .nav-link.active {
+    color: #495057;
+    background-color: transparent;
+    border-bottom: 2px solid #e6cab3; /* A bold, colored underline for the active tab */
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+    transform: translateY(-2px); /* A subtle lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Elements */
+.form-control, .form-select {
+    border-radius: 8px; /* Softens corners */
+    border: 1px solid #ced4da;
+    transition: border-color 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Your existing CSS rules */
+.img-thumbnail {
+    max-width: 120px;
+    height: auto;
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.img-thumbnail:hover {
+    transform: scale(1.05);
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert.show {
+    opacity: 1;
+}
+
+.table thead th {
+    white-space: nowrap;
+    padding: 1rem 0.75rem;
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.btn {
+    margin: 0.25rem;
+}
+
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.navbar-header {
+    background-color: #e6cab3;
+    padding: 0.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: -6rem;
+}
+
+.navbar-logo {
+    height: 90px;
+    width: auto;
+}

@@ -1,0 +1,194 @@
+body {
+    background-color: #fff;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar-header {
+    background-color: #e6cab3;
+            padding: 0.5rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+			position: sticky;  /* Make the navbar sticky */
+			top: 0;            /* Stick it to the top of the viewport */
+			z-index: 1000;
+}
+
+.navbar-brand {
+    display: block;
+    margin: 0 auto;
+}
+
+.navbar-logo {
+	height: 90px;
+            width: auto;
+			margin-left: 55rem;
+}
+.logo-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+			margin-left: -95rem;
+        }
+
+/* --- General Page Styles --- */
+body {
+    background-color: #f0f2f5; /* A light, soft gray background */
+    font-family: 'Poppins', sans-serif; /* Uses the Poppins font for a modern feel */
+    color: #495057; /* A professional, dark gray text color for readability */
+}
+
+/* --- Main Content Container --- */
+.container.py-4 {
+    background-color: #fff; /* White background for the main content area */
+    border-radius: 12px; /* Softens the corners for a modern look */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.10); /* A pronounced shadow for depth */
+    margin-top: 2rem;
+}
+
+/* --- Headings and Titles --- */
+h2 {
+    font-weight: 700; /* Bolder font for prominence */
+    color: #343a40;
+}
+
+h4 {
+    font-weight: 600;
+    color: #495057;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #e9ecef; /* A subtle horizontal line */
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* --- Search and Filter Section --- */
+.d-flex.mb-3 {
+    align-items: center;
+    gap: 0.5rem; /* Adds consistent spacing between search elements */
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* --- Tabs Styling --- */
+.nav-tabs {
+    border: none;
+}
+
+.nav-tabs .nav-link {
+    font-weight: 500;
+    color: #6c757d;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 0;
+    padding: 1rem 1.5rem;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    border-bottom: 2px solid #0d6efd; /* A bold, blue underline for the active tab */
+    background-color: transparent;
+}
+
+/* --- Cards Styling (for account details) --- */
+.card {
+   border: none;
+    border-radius: 12px;
+    /* Adjusted shadow for more depth */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    /* Stronger shadow on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    font-weight: 600;
+    color: #343a40;
+}
+
+.badge {
+    border-radius: 20px; /* Pill-shaped badges */
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+}
+
+/* --- Image Styling --- */
+.img-fluid.rounded {
+    border: 1px solid #e9ecef;
+    border-radius: 8px !important;
+    object-fit: cover;
+    transition: transform 0.2s ease;
+}
+
+.img-fluid.rounded:hover {
+    transform: scale(1.02); /* A slight zoom on hover */
+}
+
+/* --- Buttons --- */
+.btn {
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #e9ecef;
+    color: #fff; 
+	display: flex;
+    justify-content: flex-end;
+	max-width: 185px; /* Or any value you want */
+    margin-left: auto;
+    margin-right: 35px;
+	
+}
+
+.btn-secondary:hover {
+    background-color: #373b3e;
+    border-color: #dee2e6;
+}
+
+.btn-success, .btn-danger, .btn-warning {
+    font-weight: 600;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+/* --- Pagination --- */
+.pagination .page-link {
+    border-radius: 8px !important;
+    margin: 0 4px;
+    font-weight: 600;
+    color: #0d6efd;
+    transition: background-color 0.3s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pagination .page-link:hover {
+    background-color: #f0f2f5;
+}
