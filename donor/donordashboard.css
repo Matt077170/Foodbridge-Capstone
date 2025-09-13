@@ -1,0 +1,471 @@
+/*
+ * General Styles
+ */
+body {
+    background-color: #fff;
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/*
+ * Navbar Styles
+ */
+.navbar {
+    background-color: #FFDAB9;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo img {
+	width: 150px;
+    height: auto; /* Adjust logo height as needed */
+	margin-left: 50px;
+}
+
+/*
+ * Sidebar Styles
+ */
+.sidebar {
+    background-color: #f8f9fa; /* Light background */
+    color: #333333; /* Dark text for all links */
+    height: 100vh;
+    padding: 2rem 1.5rem;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    width: 250px;
+    transition: width 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h5 {
+    color: #000 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.sidebar hr {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.sidebar a {
+    color: #000000; /* Link text color */
+    text-decoration: none;
+    padding: 0.75rem 1rem;
+    display: block;
+    font-size: 1rem;
+    border-left: 5px solid transparent; /* Left border for active link */
+    transition: color 0.2s, background-color 0.2s, border-left 0.2s;
+    border-radius: 5px;
+}
+
+.sidebar a i {
+    width: 25px;
+    text-align: center;
+    color: #6c757d; /* Lighter icon color */
+}
+
+.sidebar a:hover {
+    color: #d9534f; /* Orange color on hover */
+    background-color: #e9ecef; /* Light gray background on hover */
+    border-left: 5px solid #d9534f; /* Orange accent on the left on hover */
+}
+
+.sidebar a:hover i {
+    color: #d9534f; /* Make the icon orange on hover */
+}
+
+.sidebar a.active {
+    color: #d9534f; /* Orange color for the active link text and icon */
+    background-color: #e9ecef; /* Light gray background for active link */
+    border-left: 5px solid #d9534f; /* Solid orange accent on the left */
+    font-weight: 600;
+}
+
+.sidebar a.active i {
+    color: #d9534f; /* Match the icon color to the active link */
+}
+
+.profile-thumbnail {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border: 3px solid #007bff;
+}
+
+/*
+ * Main Content Styles
+ */
+.content {
+    margin-left: 250px; /* Adjust content margin to match sidebar width */
+    padding: 2rem;
+    transition: margin-left 0.3s ease;
+}
+
+/*
+ * Specific Dashboard Element Styles
+ */
+/*
+ * Dashboard Card Styles
+ */
+/*
+ * Dashboard Card Styles
+ */
+.card {
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    margin-bottom: 15px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Hover effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.display-5 {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+/*
+ * Specific Card Colors
+ */
+.card.dashboard-approved {
+    background-color: #2ecc71; /* Emerald Green */
+}
+
+.card.dashboard-pending-donations {
+    background-color: #e74c3c; /* Alizarin Red */
+}
+
+.card.dashboard-rejected {
+    background-color: #e67e22; /* Carrot Orange */
+}
+
+.card.dashboard-approved-posts {
+    background-color: #3498db; /* Bright Blue */
+}
+
+.card.dashboard-pending-posts {
+    background-color: #9b59b6; /* Amethyst Purple */
+}
+
+.display-5 {
+    color: #fff; /* White number text */
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.table-responsive {
+    border-radius: 10px;
+    overflow-x: auto;
+}
+
+.table {
+    border-collapse: collapse;
+}
+
+.table thead th {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.image-thumbnail {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+}
+
+/*
+ * General card and list styling to match the image
+ */
+.card.shadow-sm.p-4 {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+    padding: 1.5rem !important;
+}
+
+/* Titles inside the cards */
+.card h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333; /* Dark gray to match the image */
+}
+
+/* Styles for the lists */
+.list-group {
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #eee;
+    padding: 1rem 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Remove bottom border from the last list item */
+.list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Styling for the badge/pill count */
+.badge {
+    padding: 0.5em 0.8em;
+    border-radius: 50px;
+    font-size: 0.9em;
+    font-weight: 700;
+    color: #fff; /* White text on the badge */
+}
+
+/* Custom colors for badges to match the image */
+.badge.bg-primary {
+    background-color: #3498db !important; /* A light blue for Organizations */
+}
+
+.badge.bg-warning {
+    background-color: #2ecc71 !important; /* A light green for Donors */
+}
+
+/* Styling for the table container */
+.table-responsive {
+    border-radius: 10px;
+    overflow: hidden; /* Ensures rounded corners are respected */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Table headers */
+.table thead th {
+    background-color: #f8f9fa;
+    color: #6c757d;
+    font-weight: 600;
+    border-bottom: 2px solid #dee2e6;
+    padding: 1rem;
+    text-align: left;
+}
+
+/* Table rows */
+.table tbody tr {
+    background-color: #fff;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+}
+
+/* Status badges */
+.badge.rounded-pill {
+    padding: 0.5em 1em;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Pagination links */
+.pagination .page-link {
+    border-radius: 50px;
+    margin: 0 4px;
+    color: #007bff;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+}
+
+.pagination .page-link:hover {
+    background-color: #e9ecef;
+}
+
+/* Styles for modals */
+.modal-body-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.details-btn {
+    background-color: #3498db;
+    border-color: #3498db;
+    transition: background-color 0.2s;
+}
+
+.details-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Styling for the search bar card */
+.card.shadow-sm.p-4.mb-4 {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05) !important;
+    padding: 1.5rem !important;
+}
+
+/* Styles for input fields and selects */
+.form-control, .form-select {
+    border-radius: 50px;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1.25rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Style for the 'Apply' button */
+.btn.btn-primary.w-100 {
+    background-color: #75d042;
+    border-color: #75d042;
+    border-radius: 45px;
+    padding: 1rem 1rem;
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.btn.btn-primary.w-100:hover {
+    background-color: #8ddb61;
+    border-color: #8ddb61;
+}
+
+/*
+ * Chat/Message Specific Styles
+ */
+.chat-container {
+    display: flex;
+    border-radius: 10px;
+    height: calc(100vh - 250px); /* Adjust height as needed */
+    overflow: hidden;
+}
+
+.conversation-list {
+    background-color: #f0e8e1;
+    color: #ecf0f1;
+    border-right: 1px solid #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-action-btn {
+    background-color: #6ed33f;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.chat-action-btn:hover {
+    background-color: #6eb44d;
+}
+
+.list-group-item.list-group-item-action {
+    background-color: #fff;
+    color: #000;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.list-group-item.list-group-item-action:hover {
+    background-color: #eeab6f;
+}
+
+.chat-window {
+    background-color: #f0e8e1;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background-color: #f4f7f6;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 1rem;
+    font-weight: 600;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 1.5rem;
+    overflow-y: auto;
+    background-color: #fafafa;
+}
+
+.chat-footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 1rem;
+    background-color: #f4f7f6;
+}
+
+/*
+ * Media Queries for Responsiveness
+ */
+@media (max-width: 768px) {
+    .sidebar {
+        display: none; /* Hide sidebar on small screens */
+    }
+
+    .content {
+        margin-left: 0; /* Full width for content on small screens */
+    }
+}

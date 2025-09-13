@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.logo-image {
+  width: 150px; /* Adjust this value to your desired width */
+  height: auto; /* 'auto' keeps the image's aspect ratio, preventing distortion */
+   margin-left: -50px;
+}
+
+.navbar {
+    border-bottom: 1px solid #ddd;
+	padding-top: 1px;  /* Reduce or increase */
+    padding-bottom: 1px;
+}
+
+.navbar .navbar-nav {
+			width: 95%;
+			gap: 30px;
+			font-weight: bold;
+		}
+		
+		.navbar-nav .nav-item:last-child {
+  margin-left: auto;
+}
+
+.btn-warning {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #72d43c;
+    --bs-btn-border-color: #4a9521;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #47a513;
+    --bs-btn-hover-border-color:#377315;
+    --bs-btn-focus-shadow-rgb: 217, 164, 6;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #ffcd39;
+    --bs-btn-active-border-color: #ffc720;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: ##fff;
+    --bs-btn-disabled-bg: #ffc107;
+    --bs-btn-disabled-border-color: #ffc107;
+}
+		
+
+.account-btn {
+    background-color: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.account-btn:hover {
+    background-color: #e68a00;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+}
+
+.mission-section {
+    max-width: 900px;
+}
+
+.mission-section h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4CAF50;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.mission-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* How We Started Section */
+.how-we-started {
+    margin: 40px auto;
+    max-width: 900px;
+    text-align: center;
+}
+
+.how-we-started .container {
+    text-align: left;
+}
+
+.how-we-started h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+.how-we-started p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-color);
+}
+
+.how-we-started p.lead {
+    font-size: 1.1rem;
+    
+}
+
+
+/* What We Do Section */
+.what-we-do {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.what-we-do h3 {
+    font-weight: 700;
+    color: var(--danger-color);
+}
+
+.what-we-do .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.what-we-do h5 {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.new-footer {
+    background-color: #4a545c; /* Dark grey color from the image */
+    background-image: url('images/fbg.png'); /* Assuming this is your background image */
+    background-size: cover; /* or 'contain' depending on desired effect */
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #f8f9fa;
+    padding: 30px 0; /* Adjust padding as needed */
+    position: relative;
+    overflow: hidden; /* To ensure background image doesn't bleed */
+}
+
+/* Optional: Add an overlay for better text readability */
+.new-footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(74, 84, 92, 0.1); /* Dark semi-transparent overlay */
+    z-index: 1; /* Ensures overlay is above background image */
+}
+
+.new-footer .container {
+    position: relative; /* Ensures content is above the overlay */
+    z-index: 2;
+}
+
+.new-footer .footer-logo-new {
+    height: 100px; /* Adjust size as per image */
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.new-footer .footer-left p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.7); /* Lighter text color */
+}
+
+.new-footer .footer-link-email {
+    color: #ffc107; /* Warning yellow for email link */
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.new-footer .footer-link-email:hover {
+    color: #fff;
+}
+
+.new-footer .footer-center .list-unstyled {
+    margin: 0;
+    padding: 0;
+}
+
+.new-footer .footer-nav-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: block; /* Each link on new line */
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.new-footer .footer-nav-link:hover {
+    color: #fff;
+}
+
+.new-footer .social-icons-new .social-icon {
+    display: inline-block;
+    width: 35px; /* Size of social icons */
+    height: 35px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: #fff; /* Default background for icons */
+    mask-size: 60%;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Specific social icon styles (using mask for actual icons) */
+.new-footer .social-icon.facebook {
+    background-color: #3b5998; /* Facebook blue */
+    mask-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/brands/facebook.svg'); /* Replace with actual icon path if not using Font Awesome */
+}
+
+.new-footer .social-icon.instagram {
+    background-color: #E1306C; /* Instagram pink */
+    mask-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/brands/instagram.svg'); /* Replace with actual icon path */
+}
+
+.new-footer .social-icon.linkedin {
+    background-color: #0077B5; /* LinkedIn blue */
+    mask-image: url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/svgs/brands/linkedin.svg'); /* Replace with actual icon path */
+}
+
+/* Hover effects for social icons */
+.new-footer .social-icon:hover {
+    filter: brightness(1.2); /* Slightly brighter on hover */
+}
+
+.new-footer .footer-policy-link {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.new-footer .footer-policy-link:hover {
+    color: #fff;
+}
+
+.new-footer .small-copyright {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.5); /* Very faint copyright text */
+    margin-top: 20px;
+    padding-left: 15px; /* Align with content */
+}
+
+/* Adjustments for responsiveness */
+@media (max-width: 767.98px) {
+    .new-footer .footer-left,
+    .new-footer .footer-center,
+    .new-footer .footer-right {
+        align-items: center !important;
+        text-align: center !important;
+        margin-bottom: 20px;
+    }
+
+    .new-footer .footer-left {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .new-footer .footer-logo-new {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .new-footer .social-icons-new {
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .new-footer .footer-right .d-flex {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .new-footer .footer-right .footer-policy-link:last-child {
+        margin-right: 0 !important;
+    }
+
+    .new-footer .small-copyright {
+        text-align: center;
+        padding-left: 0;
+    }
+}

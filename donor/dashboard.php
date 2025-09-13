@@ -60,47 +60,15 @@ if ($view === 'messages') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body { background: #f8f9fa; }
-        .sidebar { min-height: 100vh; background: #343a40; padding: 1rem; }
-        .sidebar a { display: block; padding: .6rem; color: #fff; text-decoration: none; margin-bottom: .4rem; border-radius: 5px; }
-        .sidebar a:hover, .sidebar a.active { background: #0d6efd; }
-        .content { padding: 2rem; }
-        .image-thumbnail { width: 40px; height: 40px; object-fit: cover; border-radius: 5px; cursor: pointer; transition: transform 0.2s; }
-        .modal-body-image { text-align: center; }
-        .modal-body-image img { max-width: 100%; height: auto; border-radius: 5px; }
-        .profile-thumbnail { width: 60px; height: 60px; object-fit: cover; border: 2px solid #fff; }
-        
-        /* [NEW] Messaging Styles */
-        .chat-container { display: flex; height: 75vh; border: 1px solid #ddd; border-radius: 5px; background: #fff; }
-        .conversation-list { border-right: 1px solid #ddd; overflow-y: auto; }
-        .conversation-list .list-group-item { cursor: pointer; border-radius: 0; border-left: 0; border-right: 0; }
-        .conversation-list .list-group-item.active { background-color: #0d6efd; color: white; }
-        .chat-window { display: flex; flex-direction: column; }
-        .chat-header { padding: 1rem; border-bottom: 1px solid #ddd; background: #f8f9fa; }
-        .chat-body { flex-grow: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column-reverse; }
-        .message { max-width: 70%; padding: 0.5rem 1rem; margin-bottom: 0.5rem; border-radius: 15px; }
-        .message.sent { background-color: #0d6efd; color: white; align-self: flex-end; border-bottom-right-radius: 0; }
-        .message.received { background-color: #e9ecef; color: #333; align-self: flex-start; border-bottom-left-radius: 0; }
-        .chat-footer { padding: 1rem; border-top: 1px solid #ddd; }
-        
-        .chat-action-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            cursor: pointer;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        .chat-action-btn:hover {
-            background-color: #0056b3;
-        }
-    </style>
+	<link rel="stylesheet" href="donordashboard.css">
 </head>
 <body>
+<nav class="navbar">
+    <a class="navbar-brand navbar-logo" href="#">
+        <img src="images/logo.png" alt="Logo">
+    </a>
+</nav>
+
 <div class="d-flex">
     <div class="col-md-2 sidebar d-none d-md-block">
         <div class="d-flex align-items-center mb-4">
@@ -114,24 +82,58 @@ if ($view === 'messages') {
         <a href="create_donation.php"><i class="fas fa-hand-holding-heart me-2"></i> Post a Donation</a>
         <a href="../shared/community_posts.php"><i class="fas fa-users me-2"></i> Community Posts</a>
         <a href="create_post.php"><i class="fas fa-edit me-2"></i> Create Post</a>
-       
         <a href="profile.php"><i class="fas fa-user-circle me-2"></i> Profile</a>
         <a href="../logout.php"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
     </div>
 
     <div class="col-md-10 content">
-        <h2>Donor Dashboard</h2>
+        
         <hr>
 
         <?php if ($view === ''): ?>
             <h3 class="mb-4">Your Donation and Post Overview</h3>
-            <div class="row g-3 mb-4">
-                <div class="col-md-4"><div class="card text-center shadow-sm"><div class="card-body"><h5 class="card-title text-muted">Approved Donations</h5><p class="display-5 text-success"><?= $counts['approved_donations'] ?></p></div></div></div>
-                <div class="col-md-4"><div class="card text-center shadow-sm"><div class="card-body"><h5 class="card-title text-muted">Pending Donations</h5><p class="display-5 text-warning"><?= $counts['pending_donations'] ?></p></div></div></div>
-                <div class="col-md-4"><div class="card text-center shadow-sm"><div class="card-body"><h5 class="card-title text-muted">Rejected Donations</h5><p class="display-5 text-danger"><?= $counts['rejected_donations'] ?></p></div></div></div>
-                <div class="col-md-6"><div class="card text-center shadow-sm"><div class="card-body"><h5 class="card-title text-muted">Approved Posts</h5><p class="display-5 text-success"><?= $counts['approved_posts'] ?></p></div></div></div>
-                <div class="col-md-6"><div class="card text-center shadow-sm"><div class="card-body"><h5 class="card-title text-muted">Pending Posts</h5><p class="display-5 text-warning"><?= $counts['pending_posts'] ?></p></div></div></div>
+<div class="row g-3 mb-4">
+    <div class="col-md-4">
+        <div class="card dashboard-approved text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-white">Approved Donations</h5>
+                <p class="display-5 text-white"><?= $counts['approved_donations'] ?></p>
             </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card dashboard-pending-donations text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-white">Pending Donations</h5>
+                <p class="display-5 text-white"><?= $counts['pending_donations'] ?></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card dashboard-rejected text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-white">Rejected Donations</h5>
+                <p class="display-5 text-white"><?= $counts['rejected_donations'] ?></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card dashboard-approved-posts text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-white">Approved Posts</h5>
+                <p class="display-5 text-white"><?= $counts['approved_posts'] ?></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card dashboard-pending-posts text-center shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-white">Pending Posts</h5>
+                <p class="display-5 text-white"><?= $counts['pending_posts'] ?></p>
+            </div>
+        </div>
+    </div>
             <div class="row mb-4">
                 <div class="col-md-6"><div class="card shadow-sm p-4 h-100"><h4 class="card-title mb-3">Yearly Donation & Post Stats</h4><canvas id="yearlyChart"></canvas></div></div>
                 <div class="col-md-6">

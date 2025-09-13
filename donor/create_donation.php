@@ -17,47 +17,10 @@ $org_result = $conn->query("SELECT id, fullname FROM users WHERE role = 'organiz
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create a Donation</title>
+	<link rel="stylesheet" href="donation.css">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for the Inter font, background image, and overlay */
-        body {
-            font-family: 'Inter', sans-serif;
-            background-image: url('../uploads/children-poverty.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            position: relative;
-        }
 
-        /* Overlay to make the form more readable */
-        body::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Dark semi-transparent overlay */
-        }
-
-        /* Hide the default file input text */
-        input[type="file"]::file-selector-button {
-            display: none;
-        }
-
-        /* Custom styling for the file input */
-        input[type="file"] {
-            @apply cursor-pointer;
-        }
-
-        /* Ensure the form container is above the overlay */
-        .form-container {
-            z-index: 10;
-        }
-    </style>
     <script>
         function toggleOtherField() {
             const otherCheckbox = document.getElementById('other-checkbox');
