@@ -2,6 +2,7 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
+
 require 'vendor/PHPMailer/phpmailer/src/Exception.php';
 require 'vendor/PHPMailer/phpmailer/src/PHPMailer.php';
 require 'vendor/PHPMailer/phpmailer/src/SMTP.php';
@@ -37,12 +38,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $mail->isSMTP();
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-             $mail->Username = 'mailer.foodbridgeph@gmail.com'; // Your Gmail
-    $mail->Password = 'jryd tvpr uexa hmzc';  // App password (NOT your Gmail password)
+             $mail->Username = 'foodbridgeph.mail@gmail.com'; // Your Gmail
+    $mail->Password = 'nahv pffm hjgk nkyb';  // App password (NOT your Gmail password)
     $mail->SMTPSecure = 'ssl';
     $mail->Port = 465;
 
-            $mail->setFrom('yourgmail@gmail.com', 'Food Bridge PH');
+            $mail->setFrom('foodbridgeph.mail@gmail.com', 'Food Bridge PH');
             $mail->addAddress($email);
 
             $mail->isHTML(true);

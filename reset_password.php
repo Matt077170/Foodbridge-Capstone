@@ -2,7 +2,9 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+require 'vendor/PHPMailer/phpmailer/src/Exception.php';
+require 'vendor/PHPMailer/phpmailer/src/PHPMailer.php';
+require 'vendor/PHPMailer/phpmailer/src/SMTP.php';
 
 include 'includes/db.php';
 
@@ -48,12 +50,12 @@ if (isset($_GET['token'])) {
                     $mail->isSMTP();
                     $mail->Host = 'smtp.gmail.com';
                     $mail->SMTPAuth = true;
-                    $mail->Username = 'mailer.foodbridgeph@gmail.com'; // your Gmail
-                    $mail->Password = 'jryd tvpr uexa hmzc'; // Gmail App password
+                    $mail->Username = 'foodbridgeph.mail@gmail.com'; // your Gmail
+                    $mail->Password = 'nahv pffm hjgk nkyb'; // Gmail App password
                     $mail->SMTPSecure = 'ssl';
                     $mail->Port = 465;
 
-                    $mail->setFrom('mailer.foodbridgeph@gmail.com', 'Food Bridge PH');
+                    $mail->setFrom('foodbridgeph.mail@gmail.com', 'Food Bridge PH');
                     $mail->addAddress($user_email);
 
                     $mail->isHTML(true);
